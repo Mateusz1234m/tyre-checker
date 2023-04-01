@@ -60,7 +60,7 @@ To speed up the process of training neural networks, validation was not performe
 ### Textfields detection:
 
 <p align="center">
-<img src="readme-data/chart_yolov4-tiny-characters-96-64-small.png"/>
+<img src="readme-data/chart_yolov4-tiny-characters-96-64.png"/>
 <p />
 
 | Iteration | 1k    | 2k    | 3k    | 4k    | 5k    | 6k    | 7k    | 8k    | 9k    | 10k   | 11k   | 12k   |
@@ -71,7 +71,7 @@ To speed up the process of training neural networks, validation was not performe
 
 <br />
 <p align="center">
-<img src="readme-data/chart_yolov4-tiny-text-fields-1216-192-small.png"/>
+<img src="readme-data/chart_yolov4-tiny-text-fields-1216-192.png"/>
 <p />
 <br />
 
