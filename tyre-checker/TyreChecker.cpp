@@ -195,10 +195,10 @@ YoloCoords TyreChecker::bboxToYolo(cv::Rect bbox, cv::Size img_size) {
 
 void InferenceTimes::printTimes(){
     std::cout << std::endl;
-    std::cout << "#####   TYRE INFO    ####" << std::endl;
+    std::cout << "####  INFERENCE TIME  ####" << std::endl;
     std::cout << "Cartesian to polar conversion: " << this->cartesian_to_polar_time << std::endl;
     std::cout << "Textfields detection: " << this->textfields_inference_time << std::endl;
     std::cout << "Characters detection: " << this->characteres_inference_time << std::endl;
     std::cout << "TOTAL: " << this->total_time << std::endl;
-    std::cout << "#########################" << std::endl;
+    std::cout << "##########################" << std::endl;
 }
