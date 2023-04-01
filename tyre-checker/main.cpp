@@ -13,13 +13,13 @@
 
 int main() {
 
-    std::string textfields_cfg_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/yolov4-tiny-text-fields-1216-192.cfg";
-    std::string textfields_weights_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/yolov4-tiny-text-fields-1216-192_10000.weights";
-    std::string textfields_names_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/obj_text_fields.names";
+    std::string textfields_cfg_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/yolov4-tiny-text-fields-1216-192.cfg";
+    std::string textfields_weights_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/yolov4-tiny-text-fields-1216-192_10000.weights";
+    std::string textfields_names_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/obj_text_fields.names";
 
-    std::string characters_cfg_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/yolov4-tiny-characters-96-64.cfg";
-    std::string characters_weights_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/yolov4-tiny-characters-96-64_7000.weights";
-    std::string characters_names_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/yolo_files/obj_characters.names";
+    std::string characters_cfg_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/yolov4-tiny-characters-96-64.cfg";
+    std::string characters_weights_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/yolov4-tiny-characters-96-64_7000.weights";
+    std::string characters_names_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/yolo_files/obj_characters.names";
 
     YoloConfig textfields_detector_config;
     YoloConfig characters_detector_config;
@@ -44,12 +44,12 @@ int main() {
 
     TyreChecker tyre_checker(textfields_detector_config, characters_detector_config);
 
-    std::string img_path = "C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/data/images/107_3104.jpg";
+    std::string img_path = "C:/Users/mateu/Desktop/projekty/tyre-checker/data/images/107_3104.jpg";
     cv::Mat tyre_img = cv::imread(img_path);
 
     auto [tyre_info, ret_img, inference_times] = tyre_checker.checkTyre(tyre_img);
 
-    cv::imwrite("C:/Users/mateu/Desktop/projekty/tyre-checker-cpp/data/images/107_3104_detections.jpg", ret_img);
+    cv::imwrite("C:/Users/mateu/Desktop/projekty/tyre-checker/data/images/107_3104_detections.jpg", ret_img);
     tyre_info.printInfo();
     inference_times.printTimes();
 }
