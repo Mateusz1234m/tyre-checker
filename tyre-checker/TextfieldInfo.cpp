@@ -4,7 +4,7 @@ void TextfieldInfo::addInfo(std::vector<Detection>& characters, float conf) {
 
     std::string text = "";
 
-    std::vector<int> x_coords;      // stores x coordinates of precious detections
+    std::vector<int> x_coords;      // stores x coordinates of previous detections
     int num_greater;                // number of x coordinates greater than x coordinate of the current detection
 
     
