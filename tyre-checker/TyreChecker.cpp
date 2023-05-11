@@ -6,6 +6,11 @@ TyreChecker::TyreChecker(YoloConfig textfields_detector_config, YoloConfig chara
     this->characters_detector = new YoloDetector(characters_detector_config);
 };
 
+TyreChecker::~TyreChecker() {
+    delete(this->textfields_detector);
+    delete(this->characters_detector);
+}
+
 std::tuple<TyreInfo, cv::Mat, InferenceTimes> TyreChecker::checkTyre(cv::Mat img) {
 
     InferenceTimes inference_times;

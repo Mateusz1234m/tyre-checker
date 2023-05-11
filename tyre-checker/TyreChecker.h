@@ -39,6 +39,9 @@ public:
     // constructor, initializes detectors based on configuration structs
     TyreChecker(YoloConfig textfields_detector_config, YoloConfig characters_detector_config);
 
+    // destructor, deletes detectors
+    ~TyreChecker();
+
     // returns tyre information based on given image
     std::tuple<TyreInfo, cv::Mat, InferenceTimes> checkTyre(cv::Mat img);
 
